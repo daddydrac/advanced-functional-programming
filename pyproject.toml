@@ -1,0 +1,52 @@
+[project]
+name = "lambdaflux-functional-python"
+version = "0.1.0"
+description = "Lambda calculus meets fusion physics—fold, compose, and rank reactor materials"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+license = "MIT"
+dependencies = [
+  "cryptography>=46.0.3,<47",
+  "fastapi>=0.141.1,<0.142",
+  "httpx>=0.28.1,<0.29",
+  "pydantic>=2.13.4,<2.14",
+  "pydantic-settings>=2.15.0,<2.16",
+  "pwdlib[argon2]>=0.3.1,<0.4",
+  "PyJWT>=2.13.0,<2.14",
+  "PyMonad==2.4.0",
+  "pyotp>=2.10.0,<2.11",
+  "qrcode>=8.2,<9",
+  "SQLAlchemy>=2.0.43,<2.1",
+  "psycopg[binary]>=3.2.9,<3.3",
+  "toolz>=1.1.0,<1.2",
+  "uvicorn[standard]>=0.52.4,<0.53",
+]
+
+[dependency-groups]
+dev = [
+  "hypothesis>=6.130,<7",
+  "mypy>=1.15,<2",
+  "pytest>=8.3,<10",
+  "pytest-asyncio>=0.25,<2",
+  "ruff>=0.11,<1",
+  "types-qrcode>=8,<9",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["chapter(number): staged implementation acceptance test"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+plugins = ["pydantic.mypy"]
+exclude = ["tutorials"]

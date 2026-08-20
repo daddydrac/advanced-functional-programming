@@ -1,0 +1,127 @@
+{
+  "disclaimer": "All values in this file are synthetic teaching data. They are not measurements, DFT results, safety limits, or reactor qualification evidence.",
+  "candidates": [
+    {
+      "material_id": "synthetic-w",
+      "formula": "W",
+      "role": "plasma_facing",
+      "composition": [{"symbol": "W", "atomic_fraction": 1.0}],
+      "properties": {
+        "melting_point_k": 3690.0,
+        "thermal_conductivity_w_mk": 168.0,
+        "thermal_expansion_1e6_per_k": 4.6,
+        "young_modulus_gpa": 405.0,
+        "bulk_modulus_gpa": 310.0,
+        "shear_modulus_gpa": 161.0,
+        "energy_above_hull_ev_atom": 0.0,
+        "neutron_tolerance_proxy": 0.56,
+        "tritium_retention_proxy": 0.33,
+        "activation_proxy": 0.64
+      },
+      "evidence": [{"source": "synthetic-course-record", "method": "invented for unit tests", "uncertainty_fraction": 0.2, "notes": "Do not cite as scientific data."}]
+    },
+    {
+      "material_id": "synthetic-w70ta30",
+      "formula": "W70Ta30",
+      "role": "plasma_facing",
+      "composition": [{"symbol": "W", "atomic_fraction": 0.7}, {"symbol": "Ta", "atomic_fraction": 0.3}],
+      "properties": {
+        "melting_point_k": 3480.0,
+        "thermal_conductivity_w_mk": 118.0,
+        "thermal_expansion_1e6_per_k": 5.4,
+        "young_modulus_gpa": 330.0,
+        "bulk_modulus_gpa": 250.0,
+        "shear_modulus_gpa": 120.0,
+        "energy_above_hull_ev_atom": 0.018,
+        "neutron_tolerance_proxy": 0.73,
+        "tritium_retention_proxy": 0.31,
+        "activation_proxy": 0.58
+      },
+      "evidence": [{"source": "synthetic-course-record", "method": "invented for unit tests", "uncertainty_fraction": 0.27, "notes": "Research-inspired alloy family; numerical values are fictional."}]
+    },
+    {
+      "material_id": "synthetic-w85re15",
+      "formula": "W85Re15",
+      "role": "plasma_facing",
+      "composition": [{"symbol": "W", "atomic_fraction": 0.85}, {"symbol": "Re", "atomic_fraction": 0.15}],
+      "properties": {
+        "melting_point_k": 3550.0,
+        "thermal_conductivity_w_mk": 103.0,
+        "thermal_expansion_1e6_per_k": 5.0,
+        "young_modulus_gpa": 390.0,
+        "bulk_modulus_gpa": 305.0,
+        "shear_modulus_gpa": 150.0,
+        "energy_above_hull_ev_atom": 0.012,
+        "neutron_tolerance_proxy": 0.68,
+        "tritium_retention_proxy": 0.44,
+        "activation_proxy": 0.82
+      },
+      "evidence": [{"source": "synthetic-course-record", "method": "invented for unit tests", "uncertainty_fraction": 0.25, "notes": "Research-inspired alloy family; numerical values are fictional."}]
+    },
+    {
+      "material_id": "synthetic-w53ta42v5",
+      "formula": "W53Ta42V5",
+      "role": "plasma_facing",
+      "composition": [{"symbol": "W", "atomic_fraction": 0.53}, {"symbol": "Ta", "atomic_fraction": 0.42}, {"symbol": "V", "atomic_fraction": 0.05}],
+      "properties": {
+        "melting_point_k": 3370.0,
+        "thermal_conductivity_w_mk": 91.0,
+        "thermal_expansion_1e6_per_k": 6.1,
+        "young_modulus_gpa": 295.0,
+        "bulk_modulus_gpa": 238.0,
+        "shear_modulus_gpa": 105.0,
+        "energy_above_hull_ev_atom": 0.029,
+        "neutron_tolerance_proxy": 0.87,
+        "tritium_retention_proxy": 0.29,
+        "activation_proxy": 0.43
+      },
+      "evidence": [{"source": "synthetic-course-record", "method": "invented for unit tests", "uncertainty_fraction": 0.35, "notes": "Composition is research-inspired; numerical values are fictional."}]
+    },
+    {
+      "material_id": "synthetic-monbtavw",
+      "formula": "MoNbTaVW",
+      "role": "structural",
+      "composition": [{"symbol": "Mo", "atomic_fraction": 0.2}, {"symbol": "Nb", "atomic_fraction": 0.2}, {"symbol": "Ta", "atomic_fraction": 0.2}, {"symbol": "V", "atomic_fraction": 0.2}, {"symbol": "W", "atomic_fraction": 0.2}],
+      "properties": {
+        "melting_point_k": 3190.0,
+        "thermal_conductivity_w_mk": 62.0,
+        "thermal_expansion_1e6_per_k": 6.8,
+        "young_modulus_gpa": 245.0,
+        "bulk_modulus_gpa": 205.0,
+        "shear_modulus_gpa": 88.0,
+        "energy_above_hull_ev_atom": 0.041,
+        "neutron_tolerance_proxy": 0.91,
+        "tritium_retention_proxy": 0.36,
+        "activation_proxy": 0.49
+      },
+      "evidence": [{"source": "synthetic-course-record", "method": "invented for unit tests", "uncertainty_fraction": 0.38, "notes": "Research-inspired alloy family; numerical values are fictional."}]
+    },
+    {
+      "material_id": "synthetic-sic-sic",
+      "formula": "SiC/SiC",
+      "role": "structural",
+      "composition": [{"symbol": "Si", "atomic_fraction": 0.5}, {"symbol": "C", "atomic_fraction": 0.5}],
+      "properties": {
+        "melting_point_k": 3000.0,
+        "thermal_conductivity_w_mk": 42.0,
+        "thermal_expansion_1e6_per_k": 4.2,
+        "young_modulus_gpa": 210.0,
+        "bulk_modulus_gpa": 175.0,
+        "shear_modulus_gpa": 82.0,
+        "energy_above_hull_ev_atom": 0.006,
+        "neutron_tolerance_proxy": 0.79,
+        "tritium_retention_proxy": 0.18,
+        "activation_proxy": 0.16
+      },
+      "evidence": [{"source": "synthetic-course-record", "method": "invented for unit tests", "uncertainty_fraction": 0.32, "notes": "Material family is real; numerical values are fictional."}]
+    }
+  ],
+  "policy": {
+    "minimum_melting_point_k": 2900.0,
+    "minimum_thermal_conductivity_w_mk": 40.0,
+    "maximum_energy_above_hull_ev_atom": 0.05,
+    "maximum_activation_proxy": 0.7,
+    "operating_temperature_k": 1200.0,
+    "exploration_weight": 0.35
+  }
+}

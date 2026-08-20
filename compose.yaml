@@ -1,0 +1,108 @@
+name: lambdaflux
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    env_file:
+      - .env
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./tutorials:/course:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      model-pull:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  postgres:
+    image: postgres:18.6-bookworm
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lambdaflux}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-lambdaflux}
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-lambdaflux} -d ${POSTGRES_DB:-lambdaflux}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  model-pull:
+    image: ollama/ollama:latest
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    depends_on:
+      ollama:
+        condition: service_healthy
+    command: ["pull", "${OLLAMA_MODEL:-qwen3:4b}"]
+    restart: "no"
+
+  init:
+    image: python:3.14.7-slim
+    profiles: ["tools"]
+    working_dir: /workspace
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - .:/workspace
+    command: ["python", "scripts/bootstrap_env.py"]
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    profiles: ["tools"]
+    environment:
+      JWT_SECRET: test-secret-that-is-long-enough-for-local-automated-tests-only
+      MFA_ENCRYPTION_KEY: MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA=
+      DATABASE_URL: sqlite+pysqlite:////tmp/lambdaflux-tests.sqlite3
+      COURSE_DIR: /course
+      CHAPTER: ${CHAPTER:-}
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid
+      - /srv/.hypothesis:size=16m,noexec,nosuid
+      - /srv/.mypy_cache:size=32m,noexec,nosuid
+      - /srv/.pytest_cache:size=8m,noexec,nosuid
+      - /srv/.ruff_cache:size=8m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+volumes:
+  postgres-data:
+  ollama-models:

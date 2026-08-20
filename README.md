@@ -4,7 +4,7 @@
 
 *Lambda calculus meets fusion physics—fold, compose, and rank reactor materials with FastAPI, PostgreSQL, and local AI ⚛️*
 
-LambdaFlux is an intentionally incomplete, chapter-driven coding workshop. You build a REST-only fusion-materials screening system one functional abstraction at a time; the repository contains signatures, frozen data shapes, docstrings, Docker Compose infrastructure, staged tests, and scientific context—but not the completed solution.
+Capstone Project is an intentionally incomplete, chapter-driven coding workshop. You build a REST-only fusion-materials screening system one functional abstraction at a time; the repository contains signatures, frozen data shapes, docstrings, Docker Compose infrastructure, staged tests, and scientific context—but not the completed solution.
 
 You write the application. The Markdown chapters teach the ideas, walk through smaller examples, name the exact skeletons to edit, and define acceptance; they never hand you completed capstone function bodies.
 
@@ -55,6 +55,6 @@ See [QUICKSTART.md](QUICKSTART.md), [docs/implementation-map.md](docs/implementa
 
 ## Scientific scope
 
-Fusion materials must be evaluated under coupled heat, plasma, neutron, mechanical, activation, and fuel-cycle constraints. LambdaFlux teaches the software and mathematical architecture of an early screening workflow; it does not predict reactor safety or qualify materials. Every bundled numerical property is synthetic and deliberately labeled as such. Real data must preserve source, method, units, uncertainty, conditions, and database version.
+Fusion materials must be evaluated under coupled heat, plasma, neutron, mechanical, activation, and fuel-cycle constraints. Capstone Project teaches the software and mathematical architecture of an early screening workflow; it does not predict reactor safety or qualify materials. Every bundled numerical property is synthetic and deliberately labeled as such. Real data must preserve source, method, units, uncertainty, conditions, and database version.
 
 The curriculum structure is mapped to the [W3Schools Python tutorial](https://www.w3schools.com/python/python_getstarted.asp) and [Functional Python Programming, Third Edition](https://github.com/PacktPublishing/Functional-Python-Programming-3rd-Edition). All tutorial prose and skeleton code are original.

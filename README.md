@@ -1,5 +1,7 @@
 # LambdaFlux Functional Python Workshop
 
+*Intro Article on LinkedIn*: 
+
 *Lambda calculus meets fusion physics—fold, compose, and rank reactor materials with FastAPI, PostgreSQL, and local AI ⚛️*
 
 LambdaFlux is an intentionally incomplete, chapter-driven coding workshop. You build a REST-only fusion-materials screening system one functional abstraction at a time; the repository contains signatures, frozen data shapes, docstrings, Docker Compose infrastructure, staged tests, and scientific context—but not the completed solution.

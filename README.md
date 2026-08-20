@@ -1,4 +1,4 @@
-# LambdaFlux Functional Python Workshop
+# Free Data Science Course: Learn Functional Programming by Screening Materials for a Fusion Reactor
 
 *Intro Article on LinkedIn*: 
 

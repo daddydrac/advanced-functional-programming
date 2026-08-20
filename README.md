@@ -1,6 +1,6 @@
 # Learn Functional Programming by Screening Materials for a Fusion Reactor
 
-*Intro Article on LinkedIn*: 
+ > *Intro Article on LinkedIn*: https://www.linkedin.com/pulse/free-data-science-course-learn-functional-programming-joe-h--ewsqc/
 
 *Lambda calculus meets fusion physics—fold, compose, and rank reactor materials with FastAPI, PostgreSQL, and local AI ⚛️*
 

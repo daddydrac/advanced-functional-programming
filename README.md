@@ -1,4 +1,4 @@
-# Free Data Science Course: Learn Functional Programming by Screening Materials for a Fusion Reactor
+# Learn Functional Programming by Screening Materials for a Fusion Reactor
 
 *Intro Article on LinkedIn*: 
 
